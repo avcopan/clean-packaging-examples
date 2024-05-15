@@ -1,0 +1,19 @@
+package:
+  name: test-package-avcopan
+  version: "1.2.3"
+
+source:
+  path: .
+
+build:
+  noarch: python 
+  script: pip install . -v
+
+requirements:
+  host:
+    - pip
+    - python >=3.9
+    - poetry
+    - wheel
+  run:
+    - python >=3.9

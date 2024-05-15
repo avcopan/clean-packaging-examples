@@ -1,0 +1,25 @@
+{
+  "info": {
+    "subdir": "noarch"
+  },
+  "packages": {},
+  "packages.conda": {
+    "test-package-avcopan-1.2.3-pyh4616a5c_0.conda": {
+      "build": "pyh4616a5c_0",
+      "build_number": 0,
+      "depends": [
+        "python >=3.9",
+        "python"
+      ],
+      "md5": "f047229afead5610c7bda65937ce5bd2",
+      "name": "test-package-avcopan",
+      "noarch": "python",
+      "sha256": "464b4adfacc91be843ef9918cc5433652e867b53009604cb7ff0e2a543df7adf",
+      "size": 15103,
+      "subdir": "noarch",
+      "timestamp": 1715802540161,
+      "version": "1.2.3"
+    }
+  },
+  "repodata_version": 2
+}

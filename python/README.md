@@ -18,6 +18,13 @@
         - `poetry config repositories.test-pypi https://test.pypi.org/legacy/`
         - `poetry config pypi-token.test-pypi <your-token>`
 
+## Publish to Anaconda.org using rattler-build
+
+1. `vi test-package-<username>/recipe.yaml`
+2. Copy the recipe example below into the `recipe.yaml` file
+3. `rattler-build build -r test-package-<username>`
+4. `rattler-build upload anaconda -c <username> /path/to/test-package-<username><stuff>.conda # ????`
+
 ## Testing
 
 You can test it out in a conda environment as follows:
@@ -30,3 +37,28 @@ python
 >>> test_package_<username>.hello()
 ```
 This should print "Hello, world!" to the screen.
+
+
+## Recipe example
+
+```
+package:
+  name: test-package-<username>
+  version: "1.2.3"
+
+source:
+  path: .
+
+build:
+  noarch: python 
+  script: pip install . -v
+
+requirements:
+  host:
+    - pip
+    - python >=3.9
+    - poetry
+    - wheel
+  run:
+    - python >=3.9
+```
