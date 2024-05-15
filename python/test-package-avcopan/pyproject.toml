@@ -1,13 +1,16 @@
 [tool.poetry]
 name = "test-package-avcopan"
-version = "0.1.0"
+version = "0.1.2"
 description = ""
 authors = ["Andreas Copan <avcopan@gmail.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.10"
+click = "^8.1.7"
 
+[tool.poetry.scripts]
+tpavc = 'test_package_avcopan:main'
 
 [build-system]
 requires = ["poetry-core"]
