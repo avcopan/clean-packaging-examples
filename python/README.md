@@ -1,4 +1,7 @@
-# Steps
+# Instructions
+
+Instructions for building a simple, pure-python package.
+
 ## Set-up
 
 1. `poetry new test-package-<username>`
