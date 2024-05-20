@@ -28,21 +28,15 @@ Instructions for building a simple, pure-python package.
 3. `rattler-build build -r test-package-<username>`
 4. To install it locally from the file, activate the desired conda environment and run `conda install /path/to/test-package-<username...>.conda`
 
-## Publish to Anaconda.org using anaconda client
+## Publish to Anaconda.org
 
-Although `rattler-build` has an upload client, it appears to have a bug, so I
-am uploading using anaconda client. It can be installed as follows:
+If you have an API token for anaconda.org, you can publish the package
+there as follows:
 ```
-pixi global install anaconda-client
+export ANACONDA_API_KEY=<API token>
+rattler-build upload anaconda -o <username> /path/to/test-package-<username...>.conda
 ```
-And run as follows.
-```
-anaconda upload -c <username> /path/to/test-package-<username...>.conda --label main
-```
-From there, you can install it in your conda environment as follows:
-```
-conda install -c <username> test-package-<username>
-```
+Note: If using the `-c` flag, be aware that it specifies the *label* (e.g. 'main'), not the conda channel.
 
 ## Testing
 
